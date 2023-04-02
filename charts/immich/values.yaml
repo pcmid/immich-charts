@@ -1,5 +1,10 @@
 # These entries are shared between all the Immich components
 
+immich:
+  persistence:
+    library:
+      existingClaim: "immich-library"
+
 env:
   REDIS_HOSTNAME: '{{ printf "%s-redis-master" .Release.Name }}'
   DB_HOSTNAME: "{{ .Release.Name }}-postgresql"
